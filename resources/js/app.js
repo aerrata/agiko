@@ -1,7 +1,9 @@
 // import './bootstrap';
-import '../css/app.css'
+// import '../css/app.css'
 
-import { createApp, h } from 'vue'
+import main from '@/main'
+
+import { createApp, h, onMounted } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
@@ -13,9 +15,17 @@ createInertiaApp({
   title: (title) => `${title} - ${appName}`,
   resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
   setup({ el, app, props, plugin }) {
-    return createApp({ render: () => h(app, props) })
+    return createApp({
+      setup() {
+        onMounted(() => {
+          delete el.dataset.page
+        })
+      },
+      render: () => h(app, props),
+    })
       .use(plugin)
       .use(ZiggyVue, Ziggy)
+      .use(main)
       .mount(el)
   },
 })

@@ -1,4 +1,6 @@
-<template>Home</template>
+<template>
+  <AppLayout> Home </AppLayout>
+</template>
 
 <script setup></script>
 
