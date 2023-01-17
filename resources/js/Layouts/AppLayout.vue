@@ -131,13 +131,39 @@
             </div>
           </div>
         </div>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <Link class="nav-link" :href="route('home')">
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="ti ti-home-2 icon"></i>
+                  </span>
+                  <span class="nav-link-title"> Home </span>
+                </Link>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#navbar-third" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                  <span class="nav-link-icon d-md-none d-lg-inline-block">
+                    <i class="ti ti-menu icon"></i>
+                  </span>
+                  <span class="nav-link-title"> Menu </span>
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./#"> Foo </a>
+                  <a class="dropdown-item" href="./#"> Bar </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <div class="page-wrapper">
       <!-- Page header -->
       <div class="page-header">
         <div class="container-xl">
-          <div class="row align-items-center mw-100">
+          <div class="row align-items-center">
             <div class="col">
               <!-- <div class="mb-1">
                 <ol class="breadcrumb" aria-label="breadcrumbs">
@@ -151,9 +177,7 @@
               </h2>
             </div>
             <div class="col-auto">
-              <div class="btn-list">
-                <a href="#" class="btn btn-primary"> Publish </a>
-              </div>
+              <slot name="action"></slot>
             </div>
           </div>
         </div>

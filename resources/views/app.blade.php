@@ -14,6 +14,7 @@
     <link href="https://preview.tabler.io/dist/css/tabler.min.css" rel="stylesheet" />
     <link href="https://preview.tabler.io/dist/css/tabler-vendors.min.css" rel="stylesheet" />
     <link href="https://preview.tabler.io/dist/css/demo.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css" rel="stylesheet">
     <style>
         @import url('https://rsms.me/inter/inter.css');
 
