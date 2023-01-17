@@ -17,5 +17,19 @@
         "postcss": "^8.1.14",
         "sass": "^1.56.1",
         "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "@tabler/core": "^1.0.0-beta16",
+        "@tiptap/extension-link": "^2.0.0-beta.209",
+        "@tiptap/extension-text-align": "^2.0.0-beta.209",
+        "@tiptap/starter-kit": "^2.0.0-beta.209",
+        "@tiptap/vue-3": "^2.0.0-beta.209",
+        "alpinejs": "^3.10.5",
+        "autosize": "^5.0.2",
+        "date-fns": "^2.29.3",
+        "imask": "^6.4.3",
+        "litepicker": "^2.0.12",
+        "nouislider": "^15.6.1",
+        "tom-select": "^2.2.2"
     }
 }

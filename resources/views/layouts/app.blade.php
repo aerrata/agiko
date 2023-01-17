@@ -10,25 +10,10 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=be-vietnam:400,600,700">
-
-    <!-- Assets -->
-    <link href="https://preview.tabler.io/dist/css/tabler.min.css" rel="stylesheet" />
-    <link href="https://preview.tabler.io/dist/css/tabler-vendors.min.css" rel="stylesheet" />
-    <link href="https://preview.tabler.io/dist/css/demo.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css" rel="stylesheet">
-    <style>
-        @import url('https://rsms.me/inter/inter.css');
-
-        :root {
-            --tblr-font-sans-serif: 'Be Vietnam', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
-        }
-    </style>
+    @vite(['resources/tabler/sass/app.scss', 'resources/tabler/js/app.js'])
 </head>
 
 <body>
-    <script src="https://preview.tabler.io/dist/js/demo-theme.min.js"></script>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -90,11 +75,6 @@
             @yield('content')
         </main>
     </div>
-    <script src="https://preview.tabler.io/dist/libs/nouislider/dist/nouislider.min.js" defer></script>
-    <script src="https://preview.tabler.io/dist/libs/litepicker/dist/litepicker.js" defer></script>
-    <script src="https://preview.tabler.io/dist/libs/tom-select/dist/js/tom-select.base.min.js" defer></script>
-    <script src="https://preview.tabler.io/dist/js/tabler.min.js" defer></script>
-    <script src="https://preview.tabler.io/dist/js/demo.min.js" defer></script>
 </body>
 
 </html>

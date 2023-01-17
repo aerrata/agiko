@@ -2,58 +2,53 @@
   <AppLayout title="Edit Post">
     <template #action>
       <div class="btn-list">
-        <button type="submit" form="form-post" class="btn btn-primary">
-          <i class="ti ti-device-floppy icon"></i>
-          <Transition enter-from-class="opacity-0" leave-to-class="opacity-0" class="transition ease-in-out">
-            <span v-if="!form.recentlySuccessful">Save</span>
-            <span v-else>Saved!</span>
-          </Transition>
+        <button type="submit" form="form-post" class="btn btn-primary" :disabled="form.processing">
+          <i class="ti ti-check icon"></i>
+          Save
         </button>
       </div>
     </template>
     <div class="row row-cards">
-      <div class="col-md-12" v-if="hasErrors">
-        <div class="alert alert-danger" role="alert">
-          <div class="d-flex">
-            <div>
-              <i class="ti ti-alert-circle icon me-2"></i>
-            </div>
-            <div>
-              <h4 class="alert-title">Whoops! There's an error.</h4>
-              <div class="text-muted">
-                <ul class="mb-0">
-                  <li v-for="(error, key) in errors" :key="key">{{ error }}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ValidationErrors />
       <div class="col-md-12">
         <form id="form-post" class="card" @submit.prevent="post.id ? form.put(route('post.update', post)) : form.post(route('post.store'))">
           <div class="card-body">
             <div class="mb-3 row">
-              <label class="col-3 col-form-label required">Type</label>
+              <label class="col-md-3 col-form-label required">Type</label>
               <div class="col">
-                <select class="form-select" v-model="form.type">
-                  <option v-for="type in types" :key="type.id" :value="type.id">{{ type.name }}</option>
-                </select>
+                <div class="form-selectgroup-boxes row row-cards mb-3">
+                  <div v-for="type in types" :key="type.id" :value="type.id" class="col-lg-6">
+                    <label class="form-selectgroup-item">
+                      <input type="radio" v-model="form.type" :value="type.id" class="form-selectgroup-input" />
+                      <span class="form-selectgroup-label d-flex align-items-center p-3">
+                        <span class="form-selectgroup-check me-3"></span>
+                        <span class="form-selectgroup-label-content">
+                          <span class="form-selectgroup-title strong mb-1">{{ type.name }}</span>
+                          <span class="d-block text-muted">{{ type.description }}</span>
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
+
             <div class="mb-3 row">
-              <label class="col-3 col-form-label required">Title</label>
+              <label class="col-md-3 col-form-label required">Title</label>
               <div class="col">
                 <input type="text" class="form-control" v-model="form.title" />
               </div>
             </div>
+
             <div class="mb-3 row">
-              <label class="col-3 col-form-label required">Description</label>
+              <label class="col-md-3 col-form-label required">Description</label>
               <div class="col">
                 <input type="text" class="form-control" v-model="form.description" />
               </div>
             </div>
+
             <div class="mb-3 row">
-              <label class="col-3 col-form-label required">Slug</label>
+              <label class="col-md-3 col-form-label required">Slug</label>
               <div class="col">
                 <div class="input-group input-group-flat">
                   <span class="input-group-text">https://alumni.test/post/</span>
@@ -61,28 +56,32 @@
                 </div>
               </div>
             </div>
+
             <div class="mb-3 row">
-              <label class="col-3 col-form-label required">Image URL</label>
+              <label class="col-md-3 col-form-label required">Image URL</label>
               <div class="col">
                 <input type="text" class="form-control" v-model="form.image_url" />
               </div>
             </div>
+
             <div class="mb-3 row">
-              <label class="col-3 col-form-label required">Content</label>
+              <label class="col-md-3 col-form-label required">Content</label>
               <div class="col">
-                <input type="text" class="form-control" v-model="form.content" />
+                <Editor v-model="form.content" />
               </div>
             </div>
+
             <!-- <div class="mb-3 row">
-              <label class="col-3 col-form-label required">Category</label>
+              <label class="col-md-3 col-form-label required">Category</label>
               <div class="col">
                 <input type="text" class="form-control" v-model="form.category" />
               </div>
             </div> -->
+
             <div class="mb-3 row">
-              <label class="col-3 col-form-label required">Publish?</label>
-              <div class="col">
-                <label class="form-check form-switch">
+              <label class="col-md-3 col-form-label required">Publish?</label>
+              <div class="col d-flex align-items-center">
+                <label class="form-check form-switch mb-0">
                   <input class="form-check-input" type="checkbox" v-model="form.published" />
                   <span class="form-check-label">Set the visibility for this post</span>
                 </label>
@@ -96,14 +95,13 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import { useForm, usePage } from '@inertiajs/inertia-vue3'
+import { ref } from 'vue'
+import { useForm } from '@inertiajs/inertia-vue3'
+
+import Editor from '@/Components/Editor.vue'
+import ValidationErrors from '@/Components/ValidationErrors.vue'
 
 const props = defineProps(['post'])
-
-const errors = computed(() => usePage().props.value.errors)
-
-const hasErrors = computed(() => Object.keys(errors.value).length > 0)
 
 const form = useForm({
   slug: props.post.meta?.slug,
@@ -117,8 +115,8 @@ const form = useForm({
 })
 
 const types = ref([
-  { id: 'article', name: 'Article' },
-  { id: 'event', name: 'Event' },
+  { id: 'article', name: 'Article', description: 'For writings, informative.' },
+  { id: 'event', name: 'Event', description: 'For news & announcements.' },
 ])
 </script>
 

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use Illuminate\Http\Request;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
-use App\Models\Post;
 
 class PostController extends Controller
 {
@@ -13,10 +14,19 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $r)
     {
         return inertia('Post/Index', [
-            'posts' => Post::with('author')->latest()->get()
+            'posts' => Post::query()
+                ->with('author')
+                ->when($r->type, function ($q, $r) {
+                    $q->where('meta->type', $r);
+                })
+                ->when($r->trashed, function ($q) {
+                    $q->onlyTrashed();
+                })
+                ->latest()
+                ->get()
         ]);
     }
 
@@ -35,13 +45,13 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorePostRequest  $request
+     * @param  \App\Http\Requests\StorePostRequest  $r
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostRequest $request)
+    public function store(StorePostRequest $r)
     {
         Post::create([
-            'meta' => $request->validated(),
+            'meta' => $r->validated(),
             'meta->author_id' => auth()->user()->id,
         ]);
 
@@ -84,14 +94,14 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatePostRequest  $request
+     * @param  \App\Http\Requests\UpdatePostRequest  $r
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePostRequest $request, Post $post)
+    public function update(UpdatePostRequest $r, Post $post)
     {
         $post->update([
-            'meta' => $request->validated(),
+            'meta' => $r->validated(),
             'meta->author_id' => auth()->user()->id,
         ]);
 
@@ -106,6 +116,15 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return back()->with('success', 'Deleted!');
+    }
+
+    public function restore(Post $post)
+    {
+        $post->restore();
+
+        return back()->with('success', 'Restored!');
     }
 }

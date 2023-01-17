@@ -5,8 +5,8 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [
     laravel({
-      input: 'resources/js/app.js',
       refresh: true,
+      input: ['resources/js/app.js', 'resources/tabler/sass/app.scss', 'resources/tabler/js/app.js'],
     }),
     vue({
       template: {
@@ -17,4 +17,14 @@ export default defineConfig({
       },
     }),
   ],
+  resolve: {
+    alias: [
+      {
+        find: /^~.+/,
+        replacement: (val) => {
+          return val.replace(/^~/, '')
+        },
+      },
+    ],
+  },
 })

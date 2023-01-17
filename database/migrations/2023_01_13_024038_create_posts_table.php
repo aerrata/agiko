@@ -18,6 +18,7 @@ return new class extends Migration
             $table->json('meta')->nullable();
             $table->string('author_id')->nullable()->virtualAs("json_unquote(json_extract(meta, '$.author_id'))");
             $table->string('slug')->nullable()->virtualAs("json_unquote(json_extract(meta, '$.slug'))");
+            $table->softDeletes();
             $table->timestamps();
         });
     }

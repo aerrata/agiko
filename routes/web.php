@@ -22,5 +22,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function () {
+    Route::post('post/{post}/restore', [App\Http\Controllers\PostController::class, 'restore'])->name('post.restore')->withTrashed();
     Route::resource('post', App\Http\Controllers\PostController::class);
 });
