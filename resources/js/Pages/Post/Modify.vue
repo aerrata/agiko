@@ -60,7 +60,8 @@
             <div class="mb-3 row">
               <label class="col-md-3 col-form-label required">Image URL</label>
               <div class="col">
-                <input type="text" class="form-control" v-model="form.image_url" />
+                <input type="file" class="form-control">
+                <input type="text" class="form-control mt-2" v-model="form.image_url" />
               </div>
             </div>
 
