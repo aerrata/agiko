@@ -110,11 +110,11 @@
 </template>
 
 <script setup>
-import { usePage } from '@inertiajs/inertia-vue3'
+import { usePage } from '@inertiajs/vue3'
 
 import Toast from '@/Components/Toast.vue'
 
-const user = usePage().props.value.auth.user
+const user = usePage().props.auth.user
 
 const props = defineProps({
   title: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-12" v-if="hasErrors">
+  <div class="col-md-12" v-if="Object.keys(errors).length > 0">
     <div class="alert alert-danger" role="alert">
       <div class="d-flex">
         <div>
@@ -20,11 +20,9 @@
 
 <script setup>
 import { computed } from 'vue'
-import { usePage } from '@inertiajs/inertia-vue3'
+import { usePage } from '@inertiajs/vue3'
 
-const errors = computed(() => usePage().props.value.errors)
-
-const hasErrors = computed(() => Object.keys(errors.value).length > 0)
+const errors = computed(() => usePage().props.errors)
 </script>
 
 <style></style>
