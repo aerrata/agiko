@@ -50,10 +50,12 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $r)
     {
-        Post::create([
+        $post = Post::create([
             'meta' => $r->validated(),
             'meta->author_id' => auth()->user()->id,
         ]);
+
+        $post->addMediaFromRequest('image_url')->toMediaCollection();
 
         return redirect()->route('post.index')->with('success', 'Saved');
     }
@@ -104,6 +106,13 @@ class PostController extends Controller
             'meta' => $r->validated(),
             'meta->author_id' => auth()->user()->id,
         ]);
+
+        if ($r->hasFile('image_url')) {
+            if ($post->getFirstMedia()) {
+                $post->getFirstMedia()->delete();
+            }
+            $post->addMediaFromRequest('image_url')->toMediaCollection();
+        }
 
         return back()->with('success', 'Saved');
     }

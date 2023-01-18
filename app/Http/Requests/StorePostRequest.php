@@ -25,12 +25,12 @@ class StorePostRequest extends FormRequest
     public function rules()
     {
         return [
-            'slug' => ['required'],
+            'slug' => ['required', 'unique:posts'],
             'type' => ['required', Rule::in(['article', 'event'])],
             'title' => ['required'],
             'content' => ['required'],
             // 'category' => ['required_if:type,article'],
-            'image_url' => ['required'],
+            // 'image_url' => ['required'],
             'published' => ['boolean'],
             'description' => ['required'],
         ];

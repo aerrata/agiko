@@ -25,6 +25,7 @@
         "alpinejs": "^3.10.5",
         "autosize": "^5.0.2",
         "date-fns": "^2.29.3",
+        "fslightbox": "^3.3.2",
         "imask": "^6.4.3",
         "litepicker": "^2.0.12",
         "nouislider": "^15.6.1",

@@ -11,8 +11,17 @@
     <div class="row row-cards">
       <ValidationErrors />
       <div class="col-md-12">
-        <form id="form-post" class="card" @submit.prevent="post.id ? form.put(route('post.update', post)) : form.post(route('post.store'))">
+        <form id="form-post" class="card" @submit.prevent="post.id ? update() : store()">
           <div class="card-body">
+
+            <div class="mb-3 row">
+              <label class="col-md-3 col-form-label required">Image URL</label>
+              <div class="col">
+                <img class="avatar avatar-xl mb-2" style="object-fit: cover;" :src="post.media[0]?.original_url" v-if="post.id && post.media[0]?.original_url" />
+                <input type="file" class="form-control" @input="form.image_url = $event.target.files[0]" />
+              </div>
+            </div>
+
             <div class="mb-3 row">
               <label class="col-md-3 col-form-label required">Type</label>
               <div class="col">
@@ -58,14 +67,6 @@
             </div>
 
             <div class="mb-3 row">
-              <label class="col-md-3 col-form-label required">Image URL</label>
-              <div class="col">
-                <input type="file" class="form-control">
-                <input type="text" class="form-control mt-2" v-model="form.image_url" />
-              </div>
-            </div>
-
-            <div class="mb-3 row">
               <label class="col-md-3 col-form-label required">Content</label>
               <div class="col">
                 <Editor v-model="form.content" />
@@ -102,7 +103,9 @@ import { useForm } from '@inertiajs/vue3'
 import Editor from '@/Components/Editor.vue'
 import ValidationErrors from '@/Components/ValidationErrors.vue'
 
-const props = defineProps(['post'])
+const props = defineProps({
+  post: Object,
+})
 
 const form = useForm({
   slug: props.post.meta?.slug,
@@ -119,6 +122,19 @@ const types = ref([
   { id: 'article', name: 'Article', description: 'For writings, informative.' },
   { id: 'event', name: 'Event', description: 'For news & announcements.' },
 ])
+
+const store = function () {
+  form.post(route('post.store'))
+}
+
+const update = function () {
+  form
+    .transform((data) => ({
+      ...data,
+      _method: 'put',
+    }))
+    .post(route('post.update', props.post))
+}
 </script>
 
 <style></style>

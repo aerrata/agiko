@@ -16,7 +16,7 @@
             <div class="row g-0">
               <div class="col-auto">
                 <div class="card-body">
-                  <div class="avatar avatar-md" :style="`background-image: url('${post.meta.image_url}}')`"></div>
+                  <div class="avatar avatar-md" style="object-fit: cover;" :style="`background-image: url('${post.media[0]?.original_url}')`"></div>
                 </div>
               </div>
               <div class="col">
@@ -26,7 +26,7 @@
                       <div class="row">
                         <div class="col">
                           <h3 class="mb-0">
-                            <a href="#">{{ post.meta.title }}</a>
+                            <Link :href="route('post.edit', post)">{{ post.meta.title }}</Link>
                           </h3>
                           <div class="text-muted mt-1">
                             {{ post.meta.description }}
@@ -85,9 +85,17 @@
           </div>
         </template>
         <template v-else>
-          <div class="card">
-            <div class="card-body text-center">
-              <span>No record found. 🫤</span>
+          <div class="empty">
+            <div class="empty-icon fs-1">
+              🫤
+            </div>
+            <p class="empty-title">No results found.</p>
+            <p class="empty-subtitle text-muted">You can create a new record.</p>
+            <div class="empty-action">
+              <Link :href="route('post.create')" class="btn btn-primary">
+                <i class="ti ti-plus icon"></i>
+                New
+              </Link>
             </div>
           </div>
         </template>

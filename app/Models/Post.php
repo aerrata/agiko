@@ -18,6 +18,8 @@ class Post extends Model implements HasMedia
         'meta' => 'object'
     ];
 
+    protected $with = ['media'];
+
     public function author()
     {
         return $this->belongsTo(User::class, 'author_id');

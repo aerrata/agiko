@@ -25,12 +25,12 @@ class UpdatePostRequest extends FormRequest
     public function rules()
     {
         return [
-            'slug' => ['required'],
+            'slug' => ['required', 'unique:posts,slug,' . $this->post->id],
             'type' => ['required', Rule::in(['article', 'event'])],
             'title' => ['required'],
             'content' => ['required'],
             // 'category' => ['required_if:type,article'],
-            'image_url' => ['required'],
+            // 'image_url' => ['required'],
             'published' => ['boolean'],
             'description' => ['required'],
         ];
