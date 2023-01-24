@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+$primary: #ed183b;
+$secondary: #003863;
+
+$font-family-sans-serif: 'Work Sans', sans-serif;
+$font-family-sans-serif-secondary: 'Brygada 1918', sans-serif;
+
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/bootstrap';
+
+@import 'components/base';
+@import 'components/navbar';
+@import 'components/blocks';
+@import 'components/footer';
+@import 'components/steps';
+@import 'components/carousel';

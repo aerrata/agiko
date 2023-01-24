@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     laravel({
       refresh: true,
-      input: ['resources/js/app.js', 'resources/tabler/sass/app.scss', 'resources/tabler/js/app.js'],
+      input: ['resources/js/app.js', 'resources/tabler/sass/app.scss', 'resources/tabler/js/app.js', 'resources/sterial/sass/app.scss'],
     }),
     vue({
       template: {

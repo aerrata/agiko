@@ -22,6 +22,7 @@
         "@tiptap/extension-text-align": "^2.0.0-beta.209",
         "@tiptap/starter-kit": "^2.0.0-beta.209",
         "@tiptap/vue-3": "^2.0.0-beta.209",
+        "@vueuse/head": "^1.0.22",
         "alpinejs": "^3.10.5",
         "autosize": "^5.0.2",
         "date-fns": "^2.29.3",

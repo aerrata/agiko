@@ -1,0 +1,79 @@
+$carousel-control-color: $white !default;
+$carousel-control-icon-width: 1.5rem !default;
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{$carousel-control-color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='15 18 9 12 15 6'></polyline></svg>") !default;
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{$carousel-control-color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 18 15 12 9 6'></polyline></svg>") !default;
+
+$carousel-indicator-thumb-opacity: 0.75 !default;
+$carousel-indicator-thumb-width: 4rem !default;
+$carousel-indicator-spacer: 3px;
+$carousel-indicator-dot-width: .5rem !default;
+$shadow: rgba(29, 39, 59, 0.04) 0 2px 4px 0 !default;
+
+.carousel {
+  
+}
+
+.carousel-indicators-vertical {
+  left: auto;
+  top: 0;
+  margin: 0 1rem 0 0;
+  flex-direction: column;
+
+  [data-bs-target] {
+    margin: $carousel-indicator-spacer 0 $carousel-indicator-spacer;
+    width: $carousel-indicator-height;
+    height: $carousel-indicator-width;
+    border: 0;
+    border-left: $carousel-indicator-hit-area-height var(--border-style) transparent;
+    border-right: $carousel-indicator-hit-area-height var(--border-style) transparent;
+  }
+}
+
+.carousel-indicators-dot {
+  [data-bs-target] {
+    width: $carousel-indicator-dot-width;
+    height: $carousel-indicator-dot-width;
+    border-radius: $border-radius-pill;
+    border: $carousel-indicator-hit-area-height var(--border-style) transparent;
+    margin: 0;
+  }
+}
+
+.carousel-indicators-thumb {
+  [data-bs-target] {
+    width: $carousel-indicator-thumb-width * .5;
+    height: auto;
+    background: no-repeat center/cover;
+    border: 0;
+    border-radius: var(--border-radius);
+    box-shadow: $shadow;
+    margin: 0 $carousel-indicator-spacer;
+    opacity: $carousel-indicator-thumb-opacity;
+
+    @include media-breakpoint-up(lg) {
+      width: $carousel-indicator-thumb-width;
+    }
+
+    &:before {
+      content: "";
+      padding-top: var(--aspect-ratio, 100%);
+      display: block;
+    }
+  }
+
+  &.carousel-indicators-vertical {
+    [data-bs-target] {
+      margin: $carousel-indicator-spacer 0;
+    }
+  }
+}
+
+.carousel-caption-background {
+  background: red;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90%;
+  background: linear-gradient(0deg, rgba($dark, .9), rgba($dark, 0));
+}

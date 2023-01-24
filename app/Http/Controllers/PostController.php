@@ -71,11 +71,11 @@ class PostController extends Controller
         abort_if(!$post->meta?->published, 404);
 
         $view = match ($post->meta?->type) {
-            'article' => 'Article/Show',
-            'event' => 'Event/Show',
+            'article' => 'post.show',
+            'event' => 'post.show',
         };
 
-        return inertia($view, [
+        return view($view, [
             'post' => $post->load('author')
         ]);
     }

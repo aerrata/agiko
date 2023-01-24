@@ -14,14 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return inertia('Welcome');
+    $posts = App\Models\Post::query()
+        ->where('meta->type', 'article')
+        ->latest()
+        ->limit(4)
+        ->get();
+
+    return view('welcome', [
+        'posts' => $posts
+    ]);
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('post/{post}',[App\Http\Controllers\PostController::class, 'show'])->name('post.show');
 Route::middleware(['auth'])->group(function () {
     Route::post('post/{post}/restore', [App\Http\Controllers\PostController::class, 'restore'])->name('post.restore')->withTrashed();
-    Route::resource('post', App\Http\Controllers\PostController::class);
+    Route::resource('post', App\Http\Controllers\PostController::class)->except(['show']);
 });
