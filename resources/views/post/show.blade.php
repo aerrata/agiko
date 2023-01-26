@@ -2,16 +2,16 @@
 
 @section('content')
 <div class="hero overlay">
-    <div class="img-bg rellax">
+    <!-- <div class="img-bg rellax"> -->
         <img src="{{ $post->getFirstMediaUrl() }}" alt="{{ $post->meta?->title }}" class="img-fluid"
-            style="width: 100%; object-fit: cover;">
-    </div>
+            style="width: 100%;">
+    <!-- </div> -->
     <div class="container">
         <div class="row align-items-center justify-content-start">
             <div class="col-lg-6 mx-auto text-center">
                 <p>By <a href="#">{{ $post->author?->name }}</a> on <a href="#">{{ $post->created_at->format('d M Y')
                         }}</a></p>
-                <h1 class="heading" data-aos="fade-up">{{ $post->meta?->title }}</h1>
+                <h3 class="heading" data-aos="fade-up">{{ $post->meta?->title }}</h1>
                 <p data-aos="fade-up">{{ $post->meta?->description }}</p>
             </div>
         </div>

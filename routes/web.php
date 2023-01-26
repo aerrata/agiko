@@ -13,17 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $posts = App\Models\Post::query()
-        ->where('meta->type', 'article')
-        ->latest()
-        ->limit(4)
-        ->get();
-
-    return view('welcome', [
-        'posts' => $posts
-    ]);
-});
+Route::get('/', [App\Http\Controllers\PageController::class, 'index'])->name('welcome');
+Route::get('/blog', [App\Http\Controllers\PageController::class, 'blog'])->name('blog');
+Route::get('/about', [App\Http\Controllers\PageController::class, 'about'])->name('about');
 
 Auth::routes();
 

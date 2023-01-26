@@ -18,3 +18,9 @@ $font-family-sans-serif-secondary: 'Brygada 1918', sans-serif;
 @import 'components/footer';
 @import 'components/steps';
 @import 'components/carousel';
+
+.hero img {
+    width: 100%;
+    transform: translate(0%, -25%) !important; 
+    max-width: 100%;
+}

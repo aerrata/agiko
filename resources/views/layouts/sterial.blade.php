@@ -19,7 +19,9 @@
     <link rel="stylesheet" href="{{ asset('sterial/css/flatpickr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('sterial/css/glightbox.min.css') }}">
 
-    <title></title>
+    <title>@yield('title')</title>
+
+    @stack('style')
 
     @vite(['resources/sterial/sass/app.scss'])
 </head>
@@ -45,8 +47,8 @@
                     </div>
                     <div class="col-lg-6 d-none d-lg-inline-block text-center nav-center-wrap">
                         <ul class="js-clone-nav  text-center site-menu p-0 m-0">
-                            <li class="active"><a href="/">Home</a></li>
-                            <li><a href="about.html">About us</a></li>
+                            <li class="fw-semibold @if(request()->is('/')) active @endif"><a href="/">Home</a></li>
+                            <li class="fw-semibold @if(request()->is('about')) active @endif"><a href="{{ route('about') }}">About us</a></li>
                             {{-- <li class="has-children">
                                 <a href="#">Dropdown</a>
                                 <ul class="dropdown">
@@ -62,15 +64,14 @@
                                     <li><a href="#">Menu Three</a></li>
                                 </ul>
                             </li> --}}
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="blog.html">Blog</a></li>
+                            <li class="fw-semibold @if(request()->is('blog')) active @endif"><a href="{{ route('blog') }}">Blog</a></li>
 
                         </ul>
                     </div>
                     <div class="col-6 col-lg-3 text-lg-end">
-                        <ul class="js-clone-nav d-none d-lg-inline-block text-end site-menu ">
+                        <!-- <ul class="js-clone-nav d-none d-lg-inline-block text-end site-menu ">
                             <li class="cta-button"><a href="contact.html">Contact Us</a></li>
-                        </ul>
+                        </ul> -->
 
                         <a href="#"
                             class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
@@ -93,8 +94,7 @@
                 <div class="col-lg-7">
                     <div class="widget">
                         <h3>About AGIKO<span class="text-primary">.</span> </h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
+                        <p>Connect and stay in touch with other alumni through our alumni group page. Share updates, network, and access exclusive resources. Attend events and stay informed about your alma mater. Join now and be a part of our alumni community.</p>
                     </div>
                     <div class="widget">
                         <h3>Connect</h3>
@@ -111,11 +111,11 @@
                     <div class="widget">
                         <h3>Links</h3>
                         <ul class="list-unstyled float-left links">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{{ route('about') }}">About us</a></li>
+                            <!-- <li><a href="#">Services</a></li> -->
+                            <li><a href="{{ route('blog') }}">Blog</a></li>
+                            <!-- <li><a href="#">Careers</a></li> -->
+                            <!-- <li><a href="#">Contact</a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -152,7 +152,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="{{ asset('/sterial/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('/sterial/js/tiny-slider.js') }}"></script>

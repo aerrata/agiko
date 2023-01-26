@@ -3,20 +3,19 @@
 @section('content')
 <div class="hero overlay">
 
-    <div class="img-bg rellax">
-        <img src="sterial/images/hero_1.jpg" alt="Image" class="img-fluid">
-    </div>
+    <!-- <div class="img-bg rellax"> -->
+        <img src="https://images.unsplash.com/photo-1619179834700-7a886aac80cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80" alt="Image" class="img-fluid"
+            style="width: 100%;">
+    <!-- </div> -->
 
     <div class="container">
         <div class="row align-items-center justify-content-start">
             <div class="col-lg-5">
 
                 <h1 class="heading" data-aos="fade-up">Alumni Graduan Institusi Korea Kebangsaan</h1>
-                <p class="mb-5" data-aos="fade-up">A small river named Duden flows by their place and supplies it
-                    with the necessary regelialia. It is a paradisematic country, in which roasted parts of
-                    sentences fly into your mouth.</p>
+                <p class="mb-5" data-aos="fade-up">Join our creative network of AGIKO graduates</p>
 
-                <div data-aos="fade-up">
+                {{-- <div data-aos="fade-up">
                     <a href="https://www.youtube.com/watch?v=5n-e6lOhVq0"
                         class="play-button align-items-center d-flex glightbox3">
                         <span class="icon-button me-3">
@@ -24,7 +23,7 @@
                         </span>
                         <span class="caption">Watch Video</span>
                     </a>
-                </div>
+                </div> --}}
             </div>
 
 
@@ -35,49 +34,37 @@
 </div>
 
 
-<div class="section section-2">
+
+<div class="section">
     <div class="container">
-        <div class="row align-items-center justify-content-between">
-            <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
-                <div class="image-stack mb-5 mb-lg-0">
-                    <div class="image-stack__item image-stack__item--bottom" data-aos="fade-up">
-                        <img src="sterial/images/img_v_1.jpg" alt="Image" class="img-fluid rellax ">
-                    </div>
-                    <div class="image-stack__item image-stack__item--top" data-aos="fade-up" data-aos-delay="100"
-                        data-rellax-percentage="0.5">
-                        <img src="sterial/images/img_v_2.jpg" alt="Image" class="img-fluid">
-                    </div>
-                </div>
-
+        <div class="row justify-content-between align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0 order-lg-2" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1551879313-d5cf0505b0ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1752&q=80" alt="Image" class="img-fluid">
             </div>
-            <div class="col-lg-4 order-lg-1">
+            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="heading mb-3" data-aos="fade-up" data-aos-delay="100">The Idea</h2>
 
-                <div>
-                    <h2 class="heading mb-3" data-aos="fade-up" data-aos-delay="100">The Idea</h2>
+                <p data-aos="fade-up" data-aos-delay="200">
+                    Malaysia’s Look East Policy was initiated in 1984 and
+                    still relevant to the current socio-economic climate in line with the implementation of the
+                    New Southern Policy launched by the South Korean government in 2017.
+                    The idea of setting up the Malaysia-Korea Technical Institute (MKTI) triggered by
+                    discussions with various parties including academicians within AGIKO.
+                </p>
 
-                    <p data-aos="fade-up" data-aos-delay="200">
-                        Malaysia’s Look East Policy was initiated in 1984 and
-                        still relevant to the current socio-economic climate in line with the implementation of the
-                        New Southern Policy launched by the South Korean government in 2017.
-                        The idea of setting up the Malaysia-Korea Technical Institute (MKTI) triggered by
-                        discussions with various parties including academicians within AGIKO.
-                    </p>
+                <p data-aos="fade-up" data-aos-delay="300">
+                    Currently, there is no specific technical institution
+                    in Malaysia that embraces the South
+                    Korean technology and positive work culture produces skilled and semi-skilled manpower to
+                    meet the demands of technology-based industry players.</p>
 
-                    <p data-aos="fade-up" data-aos-delay="300">
-                        Currently, there is no specific technical institution
-                        in Malaysia that embraces the South
-                        Korean technology and positive work culture produces skilled and semi-skilled manpower to
-                        meet the demands of technology-based industry players.</p>
-
-                    <p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary">Read
-                            more</a></p>
-                </div>
+                <p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary">Read
+                        more</a></p>
             </div>
-
         </div>
-
     </div>
 </div>
+
 
 <div class="section service-section-1">
     <div class="container">
@@ -87,8 +74,8 @@
                 <div class="heading-content" data-aos="fade-up">
                     <h2>Our <span class="d-block">Objectives</span></h2>
                     <p>Our establishment objectives</p>
-                    <p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary">View
-                            All</a></p>
+                    <!-- <p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary">View
+                            All</a></p> -->
                 </div>
             </div>
             <div class="col-lg-9">
@@ -275,7 +262,7 @@
     </div>
 </div>
 
-<div class="section bg-light">
+<!-- <div class="section bg-light">
 
 
 
@@ -395,161 +382,148 @@
 
 
 
-</div>
+</div> -->
 
-<div class="section bg-light">
+<div class="section">
 
     <h2 class="heading mb-5 text-center">AGIKO Engagements</h2>
 
+    @php
+    $data = [
+        [
+            'id' => 1,
+            'title' => '15 April 2019',
+            'description' => 'Courtesy visit to Datuk Muhd Khair Razman bin Mohamed Annuar, Director General of Manpower Department, Ministry of Human Resources.',
+            'images' => [
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png')],
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png')]
+            ],
+            'align' => 'left'
+        ],
+        [
+            'id' => 2,
+            'title' => '15 May 2019',
+            'description' => 'Courtesy visit to Datuk Seri Borhan bin Dolah, Director General of Malaysia’s Public Service.',
+            'images' => [
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png')],
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png')]
+            ],
+            'align' => 'right'
+        ],
+        [
+            'id' => 3,
+            'title' => '11 June 2019',
+            'description' => 'Courtesy visit to The Most Honourable Tun Dr. Mahathir Mohamad, Prime Minister of Malaysia.',
+            'images' => [
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png')],
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png')]
+            ],
+            'align' => 'left'
+        ],
+        [
+            'id' => 4,
+            'title' => '13 June 2019',
+            'description' => ' News coverage of the AGIKO’s courtesy visit to The Most Honourable Tun Dr. Mahathir Mohamad, Perdana Menteri Malaysia published in South Korea’s newspaper, Hankook',
+            'images' => [
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png')],
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png')]
+            ],
+            'align' => 'right'
+        ],
+        [
+            'id' => 5,
+            'title' => '24 June 2019',
+            'description' => 'Courtesy visit to Datuk Seri Rina Mohd Harun, Minister of Rural Development.',
+            'images' => [
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png')],
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png')]
+            ],
+            'align' => 'left'
+        ],
+        [
+            'id' => 6,
+            'title' => '26 February 2020',
+            'description' => 'Korean Language Introductory Class at Kolej Kemahiran Tinggi MARA (KKTM) / MARA High Skills College in Petaling Jaya.',
+            'images' => [
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png')],
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png')]
+            ],
+            'align' => 'right'
+        ],
+        [
+            'id' => 7,
+            'title' => '4 May 2021',
+            'description' => 'Hybrid talkshow "Annyeong Korea Part-3".',
+            'images' => [
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png')],
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png')]
+            ],
+            'align' => 'left'
+        ],
+        [
+            'id' => 8,
+            'title' => '22 June 2021',
+            'description' => 'Hybrid talkshow "MEET US" with Education Counselor at Malaysian Embassy in South Korea.',
+            'images' => [
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png')],
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png')]
+            ],
+            'align' => 'right'
+        ],
+        [
+            'id' => 9,
+            'title' => '12 November 2021',
+            'description' => 'Korean education fair, "Study in Korea" 2021 at Quill City Mall, Kuala Lumpur.',
+            'images' => [
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png')],
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png')]
+            ],
+            'align' => 'left'
+        ],
+        [
+            'id' => 10,
+            'title' => '17 January 2022',
+            'description' => 'Teh Tarik Session with Samsung Malaysia Electronics (SME) Sdn Bhd and Universiti Kuala Lumpur (UniKL).',
+            'images' => [
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png')],
+                ['url' => asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png')]
+            ],
+            'align' => 'right'
+        ],
+    ];
+    @endphp
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-6 offset-md-6 mb-4 mb-lg-0 order-lg-2 aos-init aos-animate" data-aos="fade-up">
                 <ul class="steps steps-vertical">
+                    @foreach($data as $item)
                     <li class="step-item">
-                        <div class="card" style="overflow: hidden;">
-                            <div id="carousel-indicators-thumb" class="carousel slide carousel-fade"
-                                data-bs-ride="carousel">
-                                <div class="carousel-indicators carousel-indicators-thumb">
-                                    <button type="button" data-bs-target="#carousel-indicators-thumb"
-                                        data-bs-slide-to="0" class="ratio ratio-4x3 active"
-                                        style="background-image: url('{{ asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png') }}')"
-                                        aria-current="true"></button>
-                                    <button type="button" data-bs-target="#carousel-indicators-thumb"
-                                        data-bs-slide-to="1" class="ratio ratio-4x3"
-                                        style="background-image: url('{{ asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png') }}')"></button>
-                                    <button type="button" data-bs-target="#carousel-indicators-thumb"
-                                        data-bs-slide-to="2" class="ratio ratio-4x3"
-                                        style="background-image: url(https://preview.tabler.io/static/photos/city-lights-reflected-in-the-water-at-night.jpg)"></button>
-                                    <button type="button" data-bs-target="#carousel-indicators-thumb"
-                                        data-bs-slide-to="3" class="ratio ratio-4x3"
-                                        style="background-image: url(https://preview.tabler.io/static/photos/cryptocurrency-bitcoin-coins.jpg)"></button>
-                                    <button type="button" data-bs-target="#carousel-indicators-thumb"
-                                        data-bs-slide-to="4" class="ratio ratio-4x3"
-                                        style="background-image: url(https://preview.tabler.io/static/photos/woman-read-book-and-drink-coffee-2.jpg)"></button>
-                                </div>
+                        <div class="card {{ $item['align'] }}" style="overflow: hidden;">
+                            <div id="carousel-controls-{{ $item['id'] }}" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img class="d-block w-100" style="height:400px; object-fit:cover;" alt=""
-                                            src="{{ asset('sterial/img/Screenshot 2023-01-20 at 10.38.02 AM.png') }}">
+                                    @foreach($item['images'] as $index => $image)
+                                    <div class="carousel-item @if($loop->first) active @endif">
+                                        <img class="d-block w-100" alt="" src="{{ $image['url'] }}">
                                     </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" style="height:400px; object-fit:cover;" alt=""
-                                            src="{{ asset('sterial/img/Screenshot 2023-01-20 at 10.38.13 AM.png') }}">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" style="height:400px; object-fit:cover;" alt=""
-                                            src="https://preview.tabler.io/static/photos/city-lights-reflected-in-the-water-at-night.jpg">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" style="height:400px; object-fit:cover;" alt=""
-                                            src="https://preview.tabler.io/static/photos/cryptocurrency-bitcoin-coins.jpg">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" style="height:400px; object-fit:cover;" alt=""
-                                            src="https://preview.tabler.io/static/photos/woman-read-book-and-drink-coffee-2.jpg">
-                                    </div>
+                                    @endforeach
                                 </div>
+                                <a class="carousel-control-prev" href="#carousel-controls-{{ $item['id'] }}" role="button" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel-controls-{{ $item['id'] }}" role="button" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </a>
                             </div>
+                            
                             <div class="card-body">
-                                <div class="h5 mb-1">15 April 2019</div>
-                                <div class="text-muted">Courtesy visit to Datuk Muhd Khair Razman bin Mohamed
-                                    Annuar,
-                                    Director General of Manpower Department, Ministry of Human Resources.</div>
+                                <div class="h5 mb-1">{{ $item['title'] }}</div>
+                                <div class="text-muted">{{ $item['description'] }}</div>
                             </div>
                         </div>
                     </li>
-                    <li class="step-item">
-                        <div class="card" style="transform: translate(-107%);">
-                            <div class="card-body">
-                                <div class="h5 mb-1">15 May 2019</div>
-                                <div class="text-muted">Courtesy visit to Datuk Seri Borhan bin Dolah, Director
-                                    General of
-                                    Malaysia’s Public Service.</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="h5 mb-1">11 June 2019</div>
-                                <div class="text-muted">Courtesy visit to The Most Honourable Tun Dr. Mahathir
-                                    Mohamad,
-                                    Prime Minister of Malaysia.</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <div class="card" style="transform: translate(-107%);">
-                            <div class="card-body">
-                                <div class="h5 mb-1">13 June 2019</div>
-                                <div class="text-muted">
-                                    News coverage of the AGIKO’s courtesy visit to The Most Honourable Tun Dr.
-                                    Mahathir
-                                    Mohamad, Perdana Menteri Malaysia published in South Korea’s newspaper, Hankook-
-                                    Ilbo.
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="h5 mb-1">24 June 2019</div>
-                                <div class="text-muted">Courtesy visit to Datuk Seri Rina Mohd Harun, Minister of
-                                    Rural
-                                    Development.</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <div class="card" style="transform: translate(-107%);">
-                            <div class="card-body">
-                                <div class="h5 mb-1">26 February 2020</div>
-                                <div class="text-muted">Korean Language Introductory Class at Kolej Kemahiran Tinggi
-                                    MARA
-                                    (KKTM) / MARA High Skills College in Petaling Jaya.</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="h5 mb-1">4 May 2021</div>
-                                <div class="text-muted">Hybrid talkshow "Annyeong Korea Part-3".</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <div class="card" style="transform: translate(-107%);">
-                            <div class="card-body">
-                                <div class="h5 mb-1">22 June 2021</div>
-                                <div class="text-muted">Hybrid talkshow "MEET US" with Education Counselor at
-                                    Malaysian
-                                    Embassy in South Korea.</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="step-item">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="h5 mb-1">12 November 2021</div>
-                                <div class="text-muted">Korean education fair, "Study in Korea" 2021 at Quill City
-                                    Mall,
-                                    Kuala Lumpur.</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="step-item active">
-                        <div class="card" style="transform: translate(-107%);">
-                            <div class="card-body">
-                                <div class="h5 mb-1">17 January 2022</div>
-                                <div class="text-muted">Teh Tarik Session with Samsung Malaysia Electronics (SME)
-                                    Sdn Bhd
-                                    and Universiti Kuala Lumpur (UniKL).</div>
-                            </div>
-                        </div>
-                    </li>
-
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -559,9 +533,42 @@
 
 <div class="section">
     <div class="container">
+
+        <div class="row">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="0">
+                <h2 class="heading mb-5">Recent Posts</h2>
+            </div>
+        </div>
+        <div class="row align-items-stretch">
+            @foreach ($posts as $post)
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="media-entry">
+                    <a href="{{ route('post.show', $post) }}" style="height: 250px;">
+                        <img src="{{ $post->getFirstMediaUrl() }}" alt="{{ $post->meta?->title }}" class="img-fluid"
+                            style="object-fit: cover; height: 100%; width: 100%;">
+                    </a>
+                    <div class="bg-white m-body">
+                        <span class="date">{{ $post->created_at->format('d M Y') }}</span>
+                        <h3><a href="{{ route('post.show', $post) }}">{{ $post->meta?->title }}</a></h3>
+                        <p>{{ $post->meta?->description }}</p>
+
+                        <a href="{{ route('post.show', $post) }}" class="more d-flex align-items-center float-start">
+                            <span class="label">Read More</span>
+                            <span class="arrow"><span class="icon-keyboard_arrow_right"></span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-5 mb-4 mb-lg-0">
-                <img src="sterial/images/img_v_2.jpg" alt="Image" class="img-fluid">
+                <img src="https://images.unsplash.com/photo-1596883313954-b67579fa3f17?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Image" class="img-fluid">
             </div>
             <div class="col-lg-5 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
 
@@ -646,52 +653,28 @@
 </div>
 
 
-<div class="section">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-12" data-aos="fade-up" data-aos-delay="0">
-                <h2 class="heading mb-5">Recent Posts</h2>
-            </div>
-        </div>
-        <div class="row align-items-stretch">
-            @foreach ($posts as $post)
-            <div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="media-entry">
-                    <a href="{{ route('post.show', $post) }}" style="height: 250px;">
-                        <img src="{{ $post->getFirstMediaUrl() }}" alt="{{ $post->meta?->title }}" class="img-fluid"
-                            style="object-fit: cover; height: 100%; width: 100%;">
-                    </a>
-                    <div class="bg-white m-body">
-                        <span class="date">{{ $post->created_at->format('d M Y') }}</span>
-                        <h3><a href="#">{{ $post->meta?->title }}</a></h3>
-                        <p>{{ $post->meta?->description }}</p>
-
-                        <a href="{{ route('post.show', $post) }}" class="more d-flex align-items-center float-start">
-                            <span class="label">Read More</span>
-                            <span class="arrow"><span class="icon-keyboard_arrow_right"></span></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</div>
-
-
 
 <div class="py-5 bg-primary">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 text-center mb-3 mb-lg-0 text-lg-start">
-                <h3 class="text-white m-0">Begin your adventurous journey here.</h3>
+                <h3 class="text-white m-0">Join our creative network of AGIKO graduates</h3>
             </div>
-            <div class="col-lg-5 text-center text-lg-end">
+            <!-- <div class="col-lg-5 text-center text-lg-end">
                 <a href="#" class="btn btn-outline-white">Get started</a>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
 
 @endsection
+
+@push('style')
+<style>
+    .left {
+        transform: translate(-107%);
+    }
+
+    
+</style>
+@endpush
