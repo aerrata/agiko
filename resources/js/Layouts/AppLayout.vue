@@ -98,7 +98,7 @@
               <ul class="list-inline list-inline-dots mb-0">
                 <li class="list-inline-item">
                   Copyright © 2023
-                  <a href="." class="link-secondary">Alumni</a>. All rights reserved.
+                  <a href="." class="link-secondary">Agiko</a>. All rights reserved.
                 </li>
               </ul>
             </div>

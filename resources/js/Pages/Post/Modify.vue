@@ -60,7 +60,7 @@
               <label class="col-md-3 col-form-label required">Slug</label>
               <div class="col">
                 <div class="input-group input-group-flat">
-                  <span class="input-group-text">https://alumni.test/post/</span>
+                  <span class="input-group-text">https://agiko.test/post/</span>
                   <input type="text" class="form-control ps-0" v-model="form.slug" />
                 </div>
               </div>
