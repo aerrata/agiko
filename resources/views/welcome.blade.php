@@ -1,37 +1,27 @@
 @extends('layouts.sterial')
 
 @section('content')
+
 <div class="hero overlay">
 
-    <!-- <div class="img-bg rellax"> -->
+		<!-- <div class="img-bg rellax"> -->
+			
         <img src="https://images.unsplash.com/photo-1619179834700-7a886aac80cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80" alt="Image" class="img-fluid"
             style="width: 100%;">
-    <!-- </div> -->
+		<!-- </div> -->
 
-    <div class="container">
-        <div class="row align-items-center justify-content-start">
-            <div class="col-lg-5">
+		<div class="container">
+			<div class="row align-items-center justify-content-start">
+				<div class="col-lg-5">
 
-                <h1 class="heading" data-aos="fade-up">Alumni Graduan Institusi Korea Kebangsaan</h1>
-                <p class="mb-5" data-aos="fade-up">Join our creative network of AGIKO graduates</p>
+					<h1 class="heading" data-aos="fade-up">Alumni Graduan Institusi Korea Kebangsaan</h1>
+					<p class="mb-4" data-aos="fade-up">Join our creative network of AGIKO graduates.</p>
+				</div>
+			</div>
+		</div>
 
-                {{-- <div data-aos="fade-up">
-                    <a href="https://www.youtube.com/watch?v=5n-e6lOhVq0"
-                        class="play-button align-items-center d-flex glightbox3">
-                        <span class="icon-button me-3">
-                            <span class="icon-play"></span>
-                        </span>
-                        <span class="caption">Watch Video</span>
-                    </a>
-                </div> --}}
-            </div>
-
-
-        </div>
-    </div>
-
-
-</div>
+		
+	</div>
 
 
 
