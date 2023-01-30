@@ -94,7 +94,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-5">
                     <div class="widget">
                         {{-- <h3>About AGIKO<span class="text-primary">.</span> </h3> --}}
                         <img src="{{ asset('images/agiko-logo.png') }}" alt="" style="width:60px;">
@@ -111,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-2 ml-auto">
+                <div class="col-lg-3 ml-auto">
                     <div class="widget">
                         <h3>Links</h3>
                         <ul class="list-unstyled float-left links">
@@ -124,17 +124,18 @@
                     </div>
                 </div>
 
-                {{-- <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="widget">
                         <h3>Contact</h3>
-                        <address>43 Raymouth Rd. Baltemoer, London 3910</address>
+                        <address>Persatuan Alumni Graduan Institusi Korea (Agiko) <br> Universiti Kuala Lumpur, 1016, Jalan Sultan Ismail, <br> 50250 Kuala Lumpur 50250 <br>
+                            Wilayah Persekutuan Kuala Lumpur</address>
                         <ul class="list-unstyled links mb-4">
-                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                            <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
+                            {{-- <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
+                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li> --}}
+                            <li><a href="mailto:agiko.korea@gmail.com">agiko.korea@gmail.com</a></li>
                         </ul>
                     </div>
-                </div> --}}
+                </div>
 
             </div>
 
