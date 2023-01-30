@@ -51,7 +51,7 @@
                     <div class="col-lg-6 d-none d-lg-inline-block text-center nav-center-wrap">
                         <ul class="js-clone-nav  text-center site-menu p-0 m-0">
                             <li class="fw-semibold @if(request()->is('/')) active @endif"><a href="/">Home</a></li>
-                            <li class="fw-semibold @if(request()->is('about')) active @endif"><a href="{{ route('about') }}">About us</a></li>
+                            {{-- <li class="fw-semibold @if(request()->is('about')) active @endif"><a href="{{ route('about') }}">About us</a></li> --}}
                             {{-- <li class="has-children">
                                 <a href="#">Dropdown</a>
                                 <ul class="dropdown">
