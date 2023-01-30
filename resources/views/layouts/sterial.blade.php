@@ -43,7 +43,10 @@
             <div class="site-navigation">
                 <div class="row">
                     <div class="col-6 col-lg-3">
-                        <a href="/" class="logo m-0 float-start">AGIKO<span class="text-primary">.</span></a>
+                        {{-- <a href="/" class="logo m-0 float-start">AGIKO<span class="text-primary">.</span></a> --}}
+                        <a href="/" class="logo m-0 float-start">
+                            <img src="{{ asset('images/agiko-logo.png') }}" alt="" style="width:60px;">
+                        </a>
                     </div>
                     <div class="col-lg-6 d-none d-lg-inline-block text-center nav-center-wrap">
                         <ul class="js-clone-nav  text-center site-menu p-0 m-0">
@@ -93,8 +96,9 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="widget">
-                        <h3>About AGIKO<span class="text-primary">.</span> </h3>
-                        <p>Connect and stay in touch with other alumni through our alumni group page. Share updates, network, and access exclusive resources. Attend events and stay informed about your alma mater. Join now and be a part of our alumni community.</p>
+                        {{-- <h3>About AGIKO<span class="text-primary">.</span> </h3> --}}
+                        <img src="{{ asset('images/agiko-logo.png') }}" alt="" style="width:60px;">
+                        <p class="mt-2">Connect and stay in touch with other alumni through our alumni group page. Share updates, network, and access exclusive resources. Attend events and stay informed about your alma mater. Join now and be a part of our alumni community.</p>
                     </div>
                     <div class="widget">
                         <h3>Connect</h3>
@@ -120,7 +124,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                {{-- <div class="col-lg-3">
                     <div class="widget">
                         <h3>Contact</h3>
                         <address>43 Raymouth Rd. Baltemoer, London 3910</address>
@@ -130,7 +134,7 @@
                             <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
 
