@@ -103,10 +103,10 @@
                     <div class="widget">
                         <h3>Connect</h3>
                         <ul class="list-unstyled social">
-                            <li><a href="#"><span class="icon-instagram"></span></a></li>
-                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                            <li><a href="https://www.instagram.com/agiko.korea/?hl=en" target="_blank"><span class="icon-instagram"></span></a></li>
+                            {{-- <li><a href="#" target="_blank"><span class="icon-twitter"></span></a></li> --}}
+                            <li><a href="https://web.facebook.com/agiko.korea/about/?ref=page_internal&_rdc=1&_rdr" target="_blank"><span class="icon-facebook"></span></a></li>
+                            {{-- <li><a href="#" target="_blank"><span class="icon-linkedin"></span></a></li> --}}
                         </ul>
                     </div>
                 </div>
@@ -127,8 +127,7 @@
                 <div class="col-lg-4">
                     <div class="widget">
                         <h3>Contact</h3>
-                        <address>Persatuan Alumni Graduan Institusi Korea (Agiko) <br> Universiti Kuala Lumpur, 1016, Jalan Sultan Ismail, <br> 50250 Kuala Lumpur 50250 <br>
-                            Wilayah Persekutuan Kuala Lumpur</address>
+                        <address>Persatuan Alumni Graduan Institusi Korea (Agiko) <br> No. 34, Jalan Serendah 26/39, <br> Hicom Industrial Estate, <br> 40400, Shah Alam, Selangor</address>
                         <ul class="list-unstyled links mb-4">
                             {{-- <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
                             <li><a href="tel://11234567890">+1(123)-456-7890</a></li> --}}
